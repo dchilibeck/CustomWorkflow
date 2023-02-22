@@ -19,12 +19,12 @@ namespace CustomWorkflowUnitTestProject
 
             //Inputs
             var inputs = new Dictionary<string, object> {
-            {"InputText", "The quick fox jumped over the lazy brown prime minister"},
+            {"InputText", "The quick fox jumped over the lazy brown dog"},
         };
 
             var result = fakedContext.ExecuteCodeActivity<WordCount>(inputs);
 
-            Assert.IsTrue(result["CountofWords"].Equals(10));
+            Assert.IsTrue(result["CountofWords"].Equals(9));
            
         }
     }
